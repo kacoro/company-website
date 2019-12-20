@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import WithLayout from '../components/WithLayout';
+import Layout from '../components/Layout';
 
 const Content = () => {
     const router = useRouter();
@@ -14,8 +14,11 @@ const Page = () => {
   const router = useRouter();
 
   return (
-    <Content />
+    <Layout>
+      <Content />
+    </Layout>
+    
   );
 };
 
-export default WithLayout(Page);
+export default Page;

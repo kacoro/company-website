@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Header from './Header'
 import Head from 'next/head'
+import ToTop from './ToTop'
 type Props = {
   title?: string
 }
@@ -23,6 +24,7 @@ const layoutStyle = {
       <header></header>
       <Header />
       {children}
+      <ToTop scrollStepInPx={1}  delayInMs={16.66} />
     </div>
   );
   
