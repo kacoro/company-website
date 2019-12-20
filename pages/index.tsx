@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import Layout from '../components/Layout';
+import { NextPage } from 'next';
+import { PostLinkType } from '../interfaces'
+import * as React from 'react'
 function getPosts() {
   return [
     { id: 'hello-nextjs', title: 'Hello Next.js' },
@@ -8,10 +11,12 @@ function getPosts() {
   ];
 }
 
-const PostLink = ({ post }) => (
+
+
+const PostLink: React.FunctionComponent<PostLinkType> = ({ id,title}) => (
   <li>
-    <Link href="/p/[id]" as={`/p/${post.id}`}>
-      <a>{post.title}</a>
+    <Link href="/p/[id]" as={`/p/${id}`}>
+      <a>{title}</a>
     </Link>
     
     <style jsx>{`
@@ -31,13 +36,13 @@ const PostLink = ({ post }) => (
       `}</style>
   </li>
 );
-function Index(){
+const Index: NextPage<{ userAgent: string }> = ({ userAgent }) => {
     return (
       <Layout>
-      <h1>Hello Next.js</h1>
+      <h1>Hello world! - user agent: {userAgent}</h1>
       <ul>
         {getPosts().map(post => (
-          <PostLink key={post.id} post={post} />
+          <PostLink key={post.id} id={post.id} title={post.title} />
         ))}
       </ul>
       <style jsx>{`
@@ -68,5 +73,8 @@ function Index(){
     )
 }
 
-  
+Index.getInitialProps = async ({ req }) => {
+  const userAgent = req ? req.headers['user-agent'] || '': navigator.userAgent;
+  return { userAgent };
+};
   export default Index;
