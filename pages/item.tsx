@@ -11,6 +11,31 @@ function getPosts() {
   ];
 }
 
+
+const ItemLink: React.FunctionComponent<PostLinkType> = ({ id,title}) => (
+  <li>
+    <Link href="/item/[id]" as={`/item/${id}`}>
+      <a>{title}</a>
+    </Link>
+    
+    <style jsx>{`
+        li {
+          list-style: none;
+          margin: 5px 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: blue;
+        }
+
+        a:hover {
+          opacity: 0.6;
+        }
+      `}</style>
+  </li>
+);
+
 const PostLink: React.FunctionComponent<PostLinkType> = ({ id,title}) => (
   <li>
     <Link href="/p/[id]" as={`/p/${id}`}>
@@ -40,7 +65,7 @@ const Index: NextPage<{ userAgent: string }> = ({ userAgent }) => {
       <h1>Hello world! - user agent: {userAgent}</h1>
       <ul>
         {getPosts().map(post => (
-          <PostLink key={post.id} id={post.id} title={post.title} />
+          <ItemLink key={post.id} id={post.id} title={post.title} />
         ))}
       </ul>
       <style jsx>{`

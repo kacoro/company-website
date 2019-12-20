@@ -6,17 +6,18 @@ const linkStyle = {
   
   const Header = () => (
     <div>
+      
       <Link href="/">
         <a style={linkStyle}>Home</a>
+      </Link>
+      <Link href="/item">
+        <a style={linkStyle}>Item</a>
       </Link>
       <Link href="/about">
         <a style={linkStyle}>About</a>
       </Link>
       <style jsx>{`
-      li {
-          list-style: none;
-          margin: 5px 0;
-        }
+     
 
         a {
           text-decoration: none;

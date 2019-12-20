@@ -8,7 +8,8 @@ type Props = {
 const layoutStyle = {
     margin: 20,
     padding: 20,
-    border: '1px solid #DDD'
+    border: '1px solid #DDD',
+    overflow:'hidden'
   };
   
   const Layout : React.FunctionComponent<Props> = ({

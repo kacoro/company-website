@@ -1,5 +1,8 @@
 const fetch = require('isomorphic-unfetch');
-module.exports = {
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+    enabled: process.env.ANALYZE === 'false'
+  })
+module.exports = withBundleAnalyzer({
     exportTrailingSlash: true,
     exportPathMap: function () {
         const paths = {
@@ -16,7 +19,10 @@ module.exports = {
         ]
         shows.forEach(show => {
             paths[`/p/${show.id}`] = { page: '/p/[id]', query: { id: show.id } };
+            paths[`/item/${show.id}`] = { page: '/item/[id]', query: { id: show.id } };
         });
+
+
         return paths;
     }
-};
+});

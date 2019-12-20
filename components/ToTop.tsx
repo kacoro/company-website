@@ -28,7 +28,7 @@ export default function ToTop(props: propsType) {
             }, props.delayInMs);
             intervalRef.current = id
         } else {
-            StopInterval()
+            // StopInterval()
         }
 
         return () => {
@@ -39,6 +39,30 @@ export default function ToTop(props: propsType) {
         <button title='Back to top' className='scroll'
             onClick={() => { scrollToTop(); }}>
             <span className='arrow-up glyphicon glyphicon-chevron-up'></span>
+            <style jsx>{`
+            .scroll {
+                opacity: 0.3;
+                background-color: aqua;
+                width: 40px;
+                height: 40px;
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                border-radius: 5px;
+                border: none;
+              }
+              .scroll:hover {
+                opacity: 1;
+              }
+                .arrow-up {
+                    color: white;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -9px;
+                    margin-left: -5px;
+                }
+            `}</style>
         </button>
     );
 }
