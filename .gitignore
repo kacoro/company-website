@@ -1,5 +1,5 @@
-.next/
 node_modules/
+.next/
+out/
 .config
 .DS_Store
-out/
