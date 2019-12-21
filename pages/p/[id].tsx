@@ -1,11 +1,9 @@
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
-import Markdown from 'react-markdown';
 import dynamic from 'next/dynamic';
 
 const Highlight = dynamic(() => import('react-highlight'));
 import marked from 'marked';
-import Head from 'next/head';
 marked.setOptions({
   gfm: true,
   breaks: true
