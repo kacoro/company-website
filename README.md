@@ -6,6 +6,12 @@ company website by next.js
 
 dev and product
 
+## install
+
+``` bash
+  npm install
+```
+
 ## dev
 
 ``` bash

@@ -3,7 +3,12 @@ import Link from 'next/link'
 import Nav from './Nav'
 
   const Footer = () => (
-    <footer className="pt-4 px-4 my-md-5 pt-md-5 border-top">
+    <footer className="py-4 px-4 mt-md-5 pt-md-5 border-top">
+        <style jsx>{`
+            footer{
+                background:#38516a
+            }
+        `}</style>
       <div className="container-xl ">
     <div className="row footer-in clearfix">
         <div className="col-24 col-md copyright">
