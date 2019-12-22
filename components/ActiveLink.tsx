@@ -16,7 +16,7 @@ function matchPath(pathname:string,href:string){
     if(href=='/'){
       return false
     }else{
-      return pathname.match(href)
+      return !!pathname.match(href)
     }
   }
 

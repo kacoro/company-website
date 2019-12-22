@@ -1,7 +1,7 @@
 import ActiveLink from './ActiveLink'
 
 const Nav = () => (
-    <ul className="nav nav-pills ">
+    <ul className="nav my-2 my-md-0 mr-md-3">
       <li className="nav-item">
         <ActiveLink activeClassName="active" href="/">
           <a className="nav-link">Home</a>
