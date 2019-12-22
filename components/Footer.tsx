@@ -3,19 +3,23 @@ import Link from 'next/link'
 import Nav from './Nav'
 
   const Footer = () => (
-    <footer className="py-4 px-4 mt-md-5 pt-md-5 border-top">
+    <footer className="py-4 px-4 mt-md-5 pt-md-5 border-top ">
         <style jsx>{`
             footer{
                 background:#38516a
             }
         `}</style>
       <div className="container-xl ">
-    <div className="row footer-in clearfix">
+    <div className="row footer-in clearfix text-white-50">
         <div className="col-24 col-md copyright">
-            <div className="copyright-logo"></div>
+            <p>
+            <img src={`/logo-b.png`} />
+            </p>
+                
+            
             <div className="copyright-text">
-                <span>copyright@广州大白互联网科技有限公司</span>
-                <p><a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">粤ICP备15060458号</a></p>
+                <span className="text-white-50 " >CopyRight 2013 All Right Reserved 焱欣智能网站</span>
+                <p><a className="text-white-50 " href="#" target="_blank">粤ICP备15060458号</a></p>
             </div>
         </div>
         {/* <div className="col-6 col-md wxcode clearfix">
