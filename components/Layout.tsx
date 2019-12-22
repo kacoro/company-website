@@ -22,7 +22,7 @@ type Props = {
       </Head>
       <header></header>
       <Header />
-      <div className="container-xl">
+      <div >
       {children}
       </div>
       <Footer/>

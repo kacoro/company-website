@@ -37,36 +37,25 @@ const PostLink: React.FunctionComponent<PostLinkType> = ({ id,title}) => (
 const Index: NextPage<{ userAgent: string }> = ({ userAgent }) => {
     return (
       <Layout>
-      <h1>Hello world! - user agent: {userAgent}</h1>
+      <img className="img-fluid"  src={`/images/banner/banner1.png`} />
+      <div className="container-xl">
       <ul>
         {getPosts().map(post => (
           <PostLink key={post.id} id={post.id} title={post.title} />
         ))}
       </ul>
+      </div>
+      
       <style jsx>{`
-        h1,
-        a {
-          font-family: 'Arial';
-          word-break: break-all;
-        }
-
+      
         ul {
           padding: 0;
         }
 
         li {
           list-style: none;
-          margin: 5px 0;
         }
 
-        a {
-          text-decoration: none;
-          color: blue;
-        }
-
-        a:hover {
-          opacity: 0.6;
-        }
       `}</style>
       </Layout>
     )
