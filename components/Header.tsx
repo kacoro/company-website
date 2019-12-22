@@ -1,14 +1,13 @@
 
 import Link from 'next/link'
 import Nav from './Nav'
-const linkStyle = {
-    marginRight: 15
-  };
-  
-  const Header = () => (
-    <div>
-      <Nav />
+
+const Header = () => (
+  <div className="container-fluid header">
+    <div className="container-xl">
+    <Nav />
     </div>
-  );
-  
-  export default Header;
+  </div>
+);
+
+export default Header;

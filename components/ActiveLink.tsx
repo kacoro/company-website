@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import PropTypes from 'prop-types'
 import Link from 'next/link'
 import React, { Children } from 'react'
 
@@ -9,15 +8,27 @@ interface Props  {
     activeClassName: string
     href:string
   }
+function matchPath(pathname:string,href:string){
+   
+  if(href == pathname){
+    return true
+  }else{
+    if(href=='/'){
+      return false
+    }else{
+      return pathname.match(href)
+    }
+  }
 
+}
 const ActiveLink = ({ children, activeClassName,href, ...props }:Props) => {
   const { pathname } = useRouter()
+  const isMatch = matchPath(pathname,href)
   const child = Children.only(children)
   const childClassName = child.props.className || ''
 
   const className =
-    pathname === href 
-      ? `${childClassName} ${activeClassName}`.trim()
+  isMatch? `${childClassName} ${activeClassName}`.trim()
       : childClassName
 
   return (

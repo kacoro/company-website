@@ -4,7 +4,7 @@
   "description": "company website by next.js",
   "main": "index.js",
   "scripts": {
-    "dev": "next -p $PROT",
+    "dev": "next",
     "build": "next build",
     "start": "next start -p $PROT",
     "export": "next export",
@@ -23,20 +23,25 @@
   "homepage": "https://github.com/kacoro/company-website#readme",
   "dependencies": {
     "@next/bundle-analyzer": "^9.1.6",
+    "@zeit/next-sass": "^1.0.1",
     "firebase": "^7.6.1",
     "isomorphic-unfetch": "^3.0.0",
     "marked": "^0.8.0",
     "next": "^9.1.6",
+    "next-offline": "^4.0.6",
+    "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-highlight": "^0.12.0",
-    "react-markdown": "^4.2.2"
+    "react-markdown": "^4.2.2",
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "@types/marked": "^0.7.2",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.17",
     "@types/react-highlight": "^0.12.2",
+    "@types/styled-components": "^4.4.1",
     "typescript": "^3.7.3"
   }
 }

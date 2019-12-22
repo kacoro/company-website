@@ -1,17 +1,23 @@
 const fetch = require('isomorphic-unfetch');
+const withOffline = require('next-offline')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: process.env.ANALYZE === 'false'
-  })
-module.exports = withBundleAnalyzer({
+})
+const dev = process.env.NODE_ENV !== 'production';
+const server = dev ? 'http://localhost:3000' : 'http://localhost:8080';
+// import { sampleProjectData } from './utils/sample-project-data'
+const withCSS = require('@zeit/next-sass')
+var config = {
+    // target: 'serverless',
+    crossOrigin: 'anonymous',
     exportTrailingSlash: true,
-    exportPathMap: function () {
+    exportPathMap: async function () {
         const paths = {
             '/': { page: '/' },
-            '/about': { page: '/about' }
+            '/about': { page: '/about' },
+            '/product': { page: '/product' },
         };
-        // const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
-        // const data = await res.json();
-        // const shows = data.map(entry => entry.show);
+        
         const shows = [
             { id: 'hello-nextjs', title: 'Hello Next.js' },
             { id: 'learn-nextjs', title: 'Learn Next.js is awesome' },
@@ -19,10 +25,24 @@ module.exports = withBundleAnalyzer({
         ]
         shows.forEach(show => {
             paths[`/p/${show.id}`] = { page: '/p/[id]', query: { id: show.id } };
-            paths[`/item/${show.id}`] = { page: '/item/[id]', query: { id: show.id } };
         });
-
+        const products = [{id:1,id:2,id:3}]
+        products.forEach(show=>{
+            paths[`/product/${show.id}`] = { page: '/product/[id]', query: { id: show.id } };
+        })
+        // const res = await fetch('http://localhost:8080/api/project');
+        // const data = await res.json();
+        // const projectData = data
+        // projectData.forEach(show => {
+        //     paths[`/project/${show.id}`] = { page: '/project/[id]', query: { id: show.id } };
+        // });
 
         return paths;
     }
-});
+}
+var nextConfig = {}
+
+if (!dev) {
+    nextConfig = config
+}
+module.exports = withCSS(nextConfig);

@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import marked from 'marked'
 import dynamic from 'next/dynamic';
+import { NextPage } from 'next';
 const Highlight = dynamic(() => import('react-highlight'));
 marked.setOptions({
   gfm: true,
@@ -12,7 +13,7 @@ type Props = {
    title:string
    content:string
 }
-function PostPage(props:Props) {
+const PostPage:NextPage<Props> = (props:Props) => {
   return(
       <Layout title={props.title}>
       <h1>{props.title}</h1>

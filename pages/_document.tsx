@@ -1,24 +1,30 @@
-import Document, { Head, Main, NextScript,DocumentContext } from 'next/document'
+
+import Document, { DocumentContext } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
-  static getInitialProps(ctx: DocumentContext) {
-    return Document.getInitialProps(ctx)
-  }
+  static async getInitialProps(ctx: DocumentContext) {
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
-  render() {
-    return (
-      <html>
-        <Head>
-          <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-light.min.css"
-            rel="stylesheet"
-          />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </html>
-    )
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+        })
+
+      const initialProps = await Document.getInitialProps(ctx)
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      }
+    } finally {
+      sheet.seal()
+    }
   }
 }

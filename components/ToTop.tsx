@@ -14,13 +14,14 @@ export default function ToTop(props: propsType) {
     }
     
     function StopInterval() {
-
         clearInterval(Number(intervalRef.current));
         setTop(true)
     }
+
     useEffect(() => {
         if (!isTop) {
             var id = setInterval(() => {
+                
                 window.scroll(0, window.pageYOffset - props.scrollStepInPx);
                 if (window.pageYOffset <= 0) {
                     StopInterval()
@@ -37,7 +38,7 @@ export default function ToTop(props: propsType) {
     });
     return (
         <button title='Back to top' className='scroll'
-            onClick={() => { scrollToTop(); }}>
+            onClick={() => { scrollToTop() }}>
             <span className='arrow-up glyphicon glyphicon-chevron-up'></span>
             <style jsx>{`
             .scroll {

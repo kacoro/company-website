@@ -10,55 +10,14 @@ function getPosts() {
     { id: 'deploy-nextjs', title: 'Deploy apps with ZEIT' }
   ];
 }
-
-
 const ItemLink: React.FunctionComponent<PostLinkType> = ({ id,title}) => (
   <li>
     <Link href="/item/[id]" as={`/item/${id}`}>
       <a>{title}</a>
     </Link>
-    
-    <style jsx>{`
-        li {
-          list-style: none;
-          margin: 5px 0;
-        }
-
-        a {
-          text-decoration: none;
-          color: blue;
-        }
-
-        a:hover {
-          opacity: 0.6;
-        }
-      `}</style>
   </li>
 );
 
-const PostLink: React.FunctionComponent<PostLinkType> = ({ id,title}) => (
-  <li>
-    <Link href="/p/[id]" as={`/p/${id}`}>
-      <a>{title}</a>
-    </Link>
-    
-    <style jsx>{`
-        li {
-          list-style: none;
-          margin: 5px 0;
-        }
-
-        a {
-          text-decoration: none;
-          color: blue;
-        }
-
-        a:hover {
-          opacity: 0.6;
-        }
-      `}</style>
-  </li>
-);
 const Index: NextPage<{ userAgent: string }> = ({ userAgent }) => {
     return (
       <Layout>
@@ -68,31 +27,6 @@ const Index: NextPage<{ userAgent: string }> = ({ userAgent }) => {
           <ItemLink key={post.id} id={post.id} title={post.title} />
         ))}
       </ul>
-      <style jsx>{`
-        h1,
-        a {
-          font-family: 'Arial';
-          word-break: break-all;
-        }
-
-        ul {
-          padding: 0;
-        }
-
-        li {
-          list-style: none;
-          margin: 5px 0;
-        }
-
-        a {
-          text-decoration: none;
-          color: blue;
-        }
-
-        a:hover {
-          opacity: 0.6;
-        }
-      `}</style>
       </Layout>
     )
 }
