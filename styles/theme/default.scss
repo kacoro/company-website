@@ -2,7 +2,10 @@
 //
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
-
+.bi {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
 // Color system
 
 $white:    #fff !default;

@@ -14,7 +14,7 @@ function getPosts() {
 const PostLink: React.FunctionComponent<PostLinkType> = ({ id,title}) => (
   <li>
     <Link href="/p/[id]" as={`/p/${id}`}>
-      <a>{title}</a>
+      <a>· {title}</a>
     </Link>
     
     <style jsx>{`

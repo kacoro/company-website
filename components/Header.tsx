@@ -5,7 +5,8 @@ import Nav from './Nav'
 const Header = () => (
   <div className="bd-navbar border-bottom shadow-sm  p-3 px-md-4 mxb-3 bg-white">
     <div className="container-xl d-flex flex-column flex-md-row align-items-center  ">
-    <h5 className="my-0 mr-md-auto font-weight-normal">Company name</h5>
+      <img  className="mr-md-auto" src={`images/nav-logo.png`} />
+    {/* <h5 className="my-0 mr-md-auto font-weight-normal">Company name</h5> */}
     <Nav />
     <a className="btn btn-outline-primary" href="#">Sign up</a>
     <style jsx>{`
