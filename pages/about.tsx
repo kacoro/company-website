@@ -3,12 +3,12 @@ import Link from 'next/link'
 import Layout from '../components/Layout'
 import '../styles/theme/about.scss'
 const AboutPage: React.FunctionComponent = () => (
-  <Layout title="About | Next.js + TypeScript Example">
-
+  <Layout title="About | Next.js + TypeScript Example" >
+  
     <img className="img-fluid" src={`/images/banner/dabbyTeam.png`} />
     <div className="container-xl">
-
-      <ul>
+    <div className="about">
+      <ul >
         <li>
           <Link href="/">
             <a>团队简介</a>
@@ -28,10 +28,11 @@ const AboutPage: React.FunctionComponent = () => (
 
 
     </div>
+    </div>    
+
     <style jsx>{`
       
       ul {
-        float:left;
         width: 100%;
         height: 60px;
         margin: 75px 0 0 0;

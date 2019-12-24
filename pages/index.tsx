@@ -12,7 +12,7 @@ function getPosts() {
 }
 
 const PostLink: React.FunctionComponent<PostLinkType> = ({ id,title}) => (
-  <li>
+  <li>  
     <Link href="/p/[id]" as={`/p/${id}`}>
       <a>· {title}</a>
     </Link>
@@ -40,6 +40,7 @@ const Index: NextPage<{ userAgent: string }> = ({ userAgent }) => {
       <img className="img-fluid"  src={`/images/banner/banner1.png`} />
       <div className="container-xl">
       <ul>
+
         {getPosts().map(post => (
           <PostLink key={post.id} id={post.id} title={post.title} />
         ))}
