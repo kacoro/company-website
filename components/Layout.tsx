@@ -22,9 +22,9 @@ type Props = {
       </Head>
       <header></header>
       <Header />
-      <div >
+      <>
       {children}
-      </div>
+      </>
       <Footer/>
       <ToTop scrollStepInPx={40}  delayInMs={16.66} />
     </div>

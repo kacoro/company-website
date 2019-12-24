@@ -52,8 +52,8 @@ export default function ToTop(props: propsType) {
                 background-color: #000;
                 text-align:center;
                 position: fixed;
-                bottom: 10px;
-                right: 10px;
+                bottom: 15px;
+                right: 15px;
                 border-radius: 5px;
                 border: none;
                 
