@@ -11,7 +11,8 @@ function Header(){
    return(
     <nav className="navbar navbar-expand-md navbar-light bg-light bd-navbar fixed-top">
       <div className="container-xl  ">
-      <img  className="mr-md-auto" src={`/images/nav-logo.png`} />
+        <h2 className="mr-md-auto">Kacoro</h2>
+      {/* <img  className="mr-md-auto" src={`/images/nav-logo.png`} /> */}
       <button onClick={() => { handleChange() }} className="navbar-toggler" type="button" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>

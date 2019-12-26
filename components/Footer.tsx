@@ -13,7 +13,8 @@ const Footer = () => (
             <div className="row footer-in clearfix text-white-50">
                 <div className="col-md-6  copyright">
                     <p>
-                        <img src={`/logo-b.png`} />
+                        <a href="https://kacoro.com" target="_blank" >Kacoro</a>
+                        {/* <img src={`/logo-b.png`} /> */}
                     </p>
                     <div className="copyright-text">
                         <span className="text-white-50 " >CopyRight 2020 All Right Reserved Kacoro</span>
