@@ -28,12 +28,16 @@ export default function Post() {
   `
   return (
     <Layout title={`${router.query.id}`}>
-      
+      <img className="img-fluid" src={`/images/banner/dabbyTeam.png`} />
+        <div className="container-xl my-5">
+         
+       
       <h1>{router.query.id}</h1>
       <div className="markdown">
         <Highlight innerHTML>{marked(content
         )}
         </Highlight>
+      </div>
       </div>
       <style jsx global>{`
         .markdown {

@@ -16,27 +16,26 @@ const Footer = () => (
                         <img src={`/logo-b.png`} />
                     </p>
                     <div className="copyright-text">
-                        <span className="text-white-50 " >CopyRight 2013 All Right Reserved 焱欣智能网站</span>
-                        <p><a className="text-white-50 " href="#" target="_blank">粤ICP备15060458号</a></p>
+                        <span className="text-white-50 " >CopyRight 2020 All Right Reserved Kacoro</span>
+                        <p><a className="text-white-50 " href="#" target="_blank">粤ICP备15********号</a></p>
                     </div>
                 </div>
 
                 <div className="col-6 col-md-3 links">
                     <ul className="links-group fl">
-                        <p>关于大白</p>
-                        <li><a className="text-white-50 " href="dabbyTeam.html">团体介绍</a></li>
-                        <li><a className="text-white-50 " href="dabbyTeam.html?select=1">联系我们</a></li>
-                        <li><a className="text-white-50 " href="dabbyTeam.html?select=2">加入我们</a></li>
+                        <p>关于</p>
+                        <li><a className="text-white-50 " href="/about">团体介绍</a></li>
+                        <li><a className="text-white-50 " href="/about?select=1">联系我们</a></li>
+                        <li><a className="text-white-50 " href="/about?select=2">加入我们</a></li>
                     </ul>
                 </div>
                 <div className="col-6 col-md-3  links">
                     <ul className="links-group fl">
-                        <p>了解及接入</p>
-                        <li><a className="text-white-50 " href="authentication.html">认证应用方案</a></li>
-                        <li><a className="text-white-50 " href="product.html?select=1">云网证APP</a></li>
-                        <li><a className="text-white-50 " href="taxPayment.html">飞缴</a></li>
-                        <li><a className="text-white-50 " href="product.html?select=2">认证徽章</a></li>
-                        <li><a className="text-white-50 " href="product.html?select=3">网证机</a></li>
+                        <p>导航</p>
+                        <li><a className="text-white-50 " href="/solution">解决方案</a></li>
+                        <li><a className="text-white-50 " href="/product">产品</a></li>
+                        <li><a className="text-white-50 " href="/news">新闻</a></li>
+                       
                     </ul>
                 </div>
             </div>
