@@ -32,7 +32,7 @@ const ActiveLink = ({ children, activeClassName,href, ...props }:Props) => {
       : childClassName
 
   return (
-    <Link href={href} {...props}>
+    <Link href={href} as={href} {...props}>
       {React.cloneElement(child, {
         className: className || null,
       })}

@@ -13,21 +13,27 @@ type Props = {
     children,
     title = 'This is the default title',
   }) =>(
-    <div >
+    <>
       <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-light.min.css" rel="stylesheet"/>
       </Head>
-      <header></header>
+      <div className="layout min-vh-100">
       <Header />
       <>
       {children}
       </>
       <Footer/>
+      </div>
       <ToTop scrollStepInPx={40}  delayInMs={16.66} />
-    </div>
+      <style jsx>{`
+        .layout{
+          padding-top:56px;
+        }
+        `}</style>
+    </>
   );
   
   export default Layout;

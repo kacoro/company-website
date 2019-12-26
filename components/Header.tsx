@@ -9,7 +9,7 @@ function Header(){
     setExpand(!expand)
   }
    return(
-    <nav className="navbar navbar-expand-md navbar-light bg-light bd-navbar ">
+    <nav className="navbar navbar-expand-md navbar-light bg-light bd-navbar fixed-top">
       <div className="container-xl  ">
       <img  className="mr-md-auto" src={`/images/nav-logo.png`} />
       <button onClick={() => { handleChange() }} className="navbar-toggler" type="button" aria-label="Toggle navigation">

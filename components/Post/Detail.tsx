@@ -1,19 +1,20 @@
 import * as React from 'react'
 
-import { Project } from '../../interfaces'
+import { Post } from '../../interfaces'
 
 type ListDetailProps = {
-  item: Project
+  item: Post
 }
 
 const ListDetail: React.FunctionComponent<ListDetailProps> = ({
-  item: project,
+  item: post,
 }) => (
   <div>
-    <img className="img-fluid"  src={project.banner} />
+    <img className="img-fluid"  src={post.banner} />
     <div className="container-xl my-5">
-    <div dangerouslySetInnerHTML={{__html:project.content}}></div>
-    </div>
+<h1>{post.title}</h1>
+    <div dangerouslySetInnerHTML={{__html:post.content}}></div>
+  </div>
   </div>
 )
 

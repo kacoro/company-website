@@ -77,4 +77,16 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
-@import '../bootstarp/bootstrap.scss'
+
+$breadcrumb-divider: quote(">");
+
+@import '../bootstarp/bootstrap.scss';
+
+button{
+  outline: 0;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+button:focus{
+  outline: 0;
+  background-color:rgba($color: #000, $alpha: .1)
+}

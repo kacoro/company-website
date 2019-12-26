@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Nav from './Nav'
 
 const Footer = () => (
-    <footer className="footer py-4 px-4 mt-md-5 pt-md-5 border-top light">
+    <footer className="footer py-4 px-4  pt-md-5 border-top light">
         <style jsx>{`
             footer{
                 background:#38516a

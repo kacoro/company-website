@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { NextPageContext } from 'next'
 
-import { Project } from '../../../interfaces'
-import Layout from '../../../components/Layout'
-import Detail from '../../../components/Project/Detail'
-import { sampleProjectData } from '../../../utils/sample-project-data'
+import { Project } from '../../interfaces'
+import Layout from '../../components/Layout'
+import Detail from '../../components/Solution/Detail'
+import { sampleProjectData } from '../../utils/sample-project-data'
 import { useRouter } from 'next/router'
 
 type Props = {
