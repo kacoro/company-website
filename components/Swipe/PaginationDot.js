@@ -11,14 +11,17 @@ const styles = {
     padding: 0,
   },
   dot: {
-    backgroundColor: '#e4e6e7',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
     height: 12,
     width: 12,
-    borderRadius: 6,
-    margin: 3,
+  
+    margin: 5,
   },
   active: {
-    backgroundColor: '#319fd6',
+    height: 14,
+    width: 14,
+    margin: 4,
+    backgroundColor: 'rgba(255, 255, 255, 1)',
   },
 };
 
@@ -41,6 +44,13 @@ class PaginationDot extends React.Component {
     return (
       <button type="button" style={styles.root} onClick={this.handleClick}>
         <div style={styleDot} />
+        <style jsx>{`
+         button{
+            outline:none
+        }
+        `}
+           
+        </style>
       </button>
     );
   }

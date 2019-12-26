@@ -104,6 +104,35 @@ const Index: NextPage<{ userAgent: string }> = ({ userAgent }) => {
       <Pagination dots={3} index={index} onChangeIndex={handleChangeIndex} />
       </div>
       <div className="container-xl">
+        <div className="my-5 d-flex justify-content-center align-content-around flex-wrap flex-row"> 
+        <div className="col-6 col-md text-center">
+            <img src="/images/index/product-logo11.png" alt="图片加载失败" />
+            <p className="product-name">飞缴</p>
+            <p className="product-info">聚合财税支付平台</p>
+            </div>
+            <div className="col-6 text-center">
+            <img src="/images/index/product-logo2.png" alt="图片加载失败" />
+            <p className="product-name">飞缴</p>
+            <p className="product-info">聚合财税支付平台</p>
+            </div>
+            <div className="col  text-center">
+            <img src="/images/index/product-logo3.png" alt="图片加载失败" />
+            <p className="product-name">飞缴</p>
+            <p className="product-info">聚合财税支付平台</p>
+            </div>
+            <div className="col  text-center">
+            <img src="/images/index/product-logo4.png" alt="图片加载失败" />
+            <p className="product-name">飞缴</p>
+            <p className="product-info">聚合财税支付平台</p>
+            </div>
+            <div className="col text-center">
+            <img src="/images/index/product-logo5.png" alt="图片加载失败" />
+            <p className="product-name">飞缴</p>
+            <p className="product-info">聚合财税支付平台</p>
+            </div>
+           
+   
+        </div>
       <ul>
         {getPosts().map(post => (
           <PostLink key={post.id} id={post.id} title={post.title} />
@@ -116,6 +145,17 @@ const Index: NextPage<{ userAgent: string }> = ({ userAgent }) => {
         .swiper{
           position:relative;
         }
+        .product-name {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: rgba(30, 42, 54, 0.8);
+          margin: .2rem 0 0 0;
+      }
+      .product-info {
+        font-size: 1rem;
+        color: rgba(30, 42, 54, 0.6);
+        margin: .22rem 0 0 0;
+    }
         ul {
           padding: 0;
         }

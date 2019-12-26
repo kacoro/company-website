@@ -9,6 +9,10 @@ const styles = {
     right: 8,
     display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    left: 0,
+    right: 0
   },
 };
 
