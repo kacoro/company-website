@@ -17,6 +17,7 @@ var config = {
             '/about': { page: '/about' },
             '/product': { page: '/product' },
             '/news': { page: '/news' },
+            '/solution': { page: '/solution' },
         };
         
         const shows = [
@@ -31,6 +32,7 @@ var config = {
         products.forEach(show=>{
             paths[`/product/${show.id}`] = { page: '/product/[id]', query: { id: show.id } };
             paths[`/news/${show.id}`] = { page: '/news/[id]', query: { id: show.id } };
+            paths[`/solution/${show.id}`] = { page: '/solution/[id]', query: { id: show.id } };
         })
         // const res = await fetch('http://localhost:8080/api/project');
         // const data = await res.json();
