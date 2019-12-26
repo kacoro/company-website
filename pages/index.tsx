@@ -88,7 +88,7 @@ const Index: NextPage<{ userAgent: string }> = ({ userAgent }) => {
   const solustions = [
     { id: 1, name: `解决方案一`, info: `信息`, img: `/images/index/product-logo1.png`, href: `/solustion/1` },
     { id: 2, name: `解决方案二`, info: `信息`, img: `/images/index/product-logo2.png`, href: `/solustion/2` },
-    { id: 3, name: `解决方案三`, info: `信息`, img: `/images/index/product-logo3.png`, href: `/solustion/3` },
+    // { id: 3, name: `解决方案三`, info: `信息`, img: `/images/index/product-logo3.png`, href: `/solustion/3` },
     { id: 4, name: `解决方案四`, info: `信息`, img: `/images/index/product-logo4.png`, href: `/solustion/4` },
     { id: 5, name: `解决方案五`, info: `信息`, img: `/images/index/product-logo5.png`, href: `/solustion/5` },
   ]
